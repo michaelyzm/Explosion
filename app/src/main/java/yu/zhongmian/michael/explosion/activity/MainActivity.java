@@ -29,11 +29,13 @@ public class MainActivity extends Activity {
         explodeView = (ExplodeView)findViewById(R.id.activity_main_explode_view);
         restart = (TextView)findViewById(R.id.activity_main_restart);
         duration = (TextView)findViewById(R.id.activity_main_duration);
+        duration.setText("0");
         restart.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 explodeView.reset();
                 beginTime = 0;
+                duration.setText("0");
             }
         });
         explodeView.setOnClickListener(new View.OnClickListener() {
